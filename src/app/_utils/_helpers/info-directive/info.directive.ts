@@ -33,6 +33,10 @@ export class InfoDirective implements AfterViewInit {
     }, 700);
   }
 
+  /**
+   * creates an icon graphic
+   * @returns an icon graphic
+   */
   private createIconElement(): void {
     if (!this.tooltip) return;
 
@@ -45,6 +49,11 @@ export class InfoDirective implements AfterViewInit {
     this.renderer.appendChild(this.el.nativeElement, iconElement);
   }
 
+  /**
+   * resetInfoText()
+   * resets the tooltip when user closes or hovers off
+   */
+
   private resetInfoText(): void {
     const infoBox: HTMLElement = this.el.nativeElement.querySelector('span');
 
@@ -52,6 +61,12 @@ export class InfoDirective implements AfterViewInit {
 
     return;
   }
+
+  /**
+   * generateInfoBox()
+   * @param text - string to pass into the tooltip box
+   * @returns tool tip element which appears on hover
+   */
 
   private generateInfoBox(text: string): HTMLElement {
     //create span for tool tip box and set styling
