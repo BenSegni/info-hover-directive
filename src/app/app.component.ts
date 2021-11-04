@@ -17,12 +17,14 @@ export class AppComponent implements OnInit {
 
   private assignToolTips(): void {
     this.toolTipOne = {
+      toolTipTitle: 'This List',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
       link: 'https://bensegni.github.io',
       linkText: 'Access Help',
     };
 
     this.toolTipTwo = {
+      toolTipTitle: 'This Form',
       imageUrl: 'https://download.logo.wine/logo/BBC/BBC-Logo.wine.png',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       link: 'https://bbc.com',
@@ -30,6 +32,7 @@ export class AppComponent implements OnInit {
     };
 
     this.toolTipThree = {
+      toolTipTitle: 'This Paragraph',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     };
   }

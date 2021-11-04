@@ -61,7 +61,9 @@ export class InfoDirective implements AfterViewInit {
 
     //set title for tool tip box
     const titleElement: HTMLElement = this.renderer.createElement('h4');
-    const title: string = this.renderer.createText('Tool Tip:');
+    const title: string = this.renderer.createText(
+      `Tool Tip: ${this.tooltip.toolTipTitle}`
+    );
 
     this.renderer.appendChild(titleElement, title);
 
@@ -92,8 +94,8 @@ export class InfoDirective implements AfterViewInit {
       this.renderer.appendChild(link, linkText);
     }
 
+    //create a help link title for the link to display after
     if (this.tooltip.link && this.tooltip.linkText) {
-      //create a help link title for the link to display after
       const helpTextTitle: HTMLElement = this.renderer.createElement('p');
       helpTextTitle.classList.add('help-title');
       const helpText: string = this.renderer.createText('Help Link: ');
@@ -104,12 +106,12 @@ export class InfoDirective implements AfterViewInit {
       this.renderer.appendChild(infoBox, helpTextTitle);
     }
 
+    //create a breakpoint if there is no link added to tooltip
     if (
       (!this.tooltip.link && !this.tooltip.linkText) ||
       (this.tooltip.link && !this.tooltip.linkText) ||
       (!this.tooltip.link && this.tooltip.linkText)
     ) {
-      //create a breakpoint if there is no link added to tooltip
       const breakPoint: HTMLElement = this.renderer.createElement('span');
       breakPoint.classList.add('breakpoint');
 
