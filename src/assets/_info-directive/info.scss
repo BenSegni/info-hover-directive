@@ -1,20 +1,66 @@
 @import "../font-awesome/fontawesome.scss";
 @import "../font-awesome/solid.scss";
 
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
 .info-box {
   font-size: 0.75rem;
   font-weight: normal;
-  width: 120px;
-  background-color: black;
-  color: white;
+  width: 12rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  color: black;
   text-align: center;
   border-radius: 0.25rem;
   padding: 1rem;
   margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 
   /* Position the tooltip */
   position: absolute;
+  box-shadow: 0.25rem 0.25rem 0.5rem #666;
   z-index: 1;
+
+  .help-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .tool-tip-link {
+    display: block;
+    color: darkred;
+    clear: both;
+    margin: 0.25rem;
+  }
+
+  .breakpoint {
+    display: block;
+    width: 100%;
+    height: 1rem;
+  }
+
+  h4 {
+    margin: 0 0 1rem 0;
+  }
+
+  img {
+    border: 1px solid #ccc;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    background-color: darkred;
+    border: 1px solid darkred;
+    color: white;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .info-icon-wrapper {
@@ -23,7 +69,7 @@
 
 icon {
   &:before {
-    color: grey;
+    color: darkred;
     display: inline-block;
     height: 1rem;
     width: 1rem;
@@ -38,15 +84,17 @@ icon {
 
 form {
   input {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
     margin-bottom: 1rem;
     padding: 0.5rem 0;
     text-indent: 0.5rem;
-    border: 1px solid blueviolet;
+    border: 1px solid darkred;
   }
 
   label {
     font-size: 0.75rem;
-    color: purple;
+    color: darkred;
     margin-bottom: 0.5rem;
   }
 }
