@@ -6,7 +6,7 @@ import {
   Input,
   Renderer2,
 } from '@angular/core';
-import { ToolTipConfig } from '../info-directive/tooltip';
+import { ToolTipConfig } from './tooltip';
 
 @Directive({
   selector: '[tooltip]',
@@ -15,8 +15,8 @@ export class InfoDirective implements AfterViewInit {
   @Input() tooltip: ToolTipConfig;
 
   constructor(
-    private readonly el: ElementRef,
-    private readonly renderer: Renderer2
+    private el: ElementRef,
+    private renderer: Renderer2
   ) {}
 
   public ngAfterViewInit(): void {

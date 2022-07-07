@@ -105,6 +105,68 @@
           }
         }
       }
+    },
+    "bbksdev-tooltip": {
+      "projectType": "library",
+      "root": "projects/bbksdev-tooltip",
+      "sourceRoot": "projects/bbksdev-tooltip/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/bbksdev-tooltip/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/bbksdev-tooltip/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/bbksdev-tooltip/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bbksdev-tooltip/src/test.ts",
+            "tsConfig": "projects/bbksdev-tooltip/tsconfig.spec.json",
+            "karmaConfig": "projects/bbksdev-tooltip/karma.conf.js"
+          }
+        }
+      }
+    },
+    "@bensegni/tool-tip": {
+      "projectType": "library",
+      "root": "projects/bensegni/tool-tip",
+      "sourceRoot": "projects/bensegni/tool-tip/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/bensegni/tool-tip/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/bensegni/tool-tip/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/bensegni/tool-tip/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bensegni/tool-tip/src/test.ts",
+            "tsConfig": "projects/bensegni/tool-tip/tsconfig.spec.json",
+            "karmaConfig": "projects/bensegni/tool-tip/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "info-directive"

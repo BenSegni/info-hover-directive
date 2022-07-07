@@ -3,6 +3,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@bensegni/tool-tip": [
+        "dist/bensegni/tool-tip/bensegni-tool-tip",
+        "dist/bensegni/tool-tip"
+      ],
+      "bbksdev-tooltip": [
+        "dist/bbksdev-tooltip/bbksdev-tooltip",
+        "dist/bbksdev-tooltip"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
